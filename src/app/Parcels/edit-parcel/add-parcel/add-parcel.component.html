@@ -1,0 +1,25 @@
+<div class="content">
+    <div class="left">
+        <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fexpa.co.ke%2F&psig=AOvVaw2oLEgG-NTdCdn_UpKsJPk3&ust=1677307607287000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCLCtyL7Rrf0CFQAAAAAdAAAAABAb" alt="">
+    </div>
+    <form [formGroup]=" addParcel" (ngSubmit)="AddParcel()">
+    <div class="right">
+      
+        <h1> Add a New Parcel</h1>
+        <Label>Name</Label>
+        <input type="text" formControlName="name" />
+
+        <Label>Description</Label>
+        <input type="text" formControlName="description" />
+
+        <Label>Image</Label>
+        <input type="text" formControlName="image" />
+
+          <Label>Price</Label>
+        <input type="text" formControlName="price" />
+
+        <button type="submit"> Submit Data</button>
+    
+    </div>
+</form>
+</div>

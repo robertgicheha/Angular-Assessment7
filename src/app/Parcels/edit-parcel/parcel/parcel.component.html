@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="content">
+        <div class="left" *ngIf="parcel;else noParcel">
+            <img src={{parcel.image}}
+                alt="Parcel" />
+               
+        </div>
+
+        <div class="right">
+            <h1>{{parcel.name}}</h1>
+            <p>{{parcel.description}}</p>
+            <p *ngIf="show"> {{parcel.price | currency}}</p>
+            <button (click)="Update()">Update</button>
+        </div>
+    </div>
+</div>
+
+
+<ng-template #noParcel>
+<p>No Parcel with that Id was Found</p>
+</ng-template>
+

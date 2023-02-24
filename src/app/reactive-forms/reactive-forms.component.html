@@ -1,0 +1,40 @@
+<div class="main-container">
+
+    <div class="left">
+        <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.customerservicemanager.com%2Fhow-parcel-delivery-is-centered-around-customer-service%2F&psig=AOvVaw2oLEgG-NTdCdn_UpKsJPk3&ust=1677307607287000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCODH9fLHrf0CFQAAAAAdAAAAABAE" alt="">
+    </div>
+    
+<form [formGroup]= "form" (ngSubmit)="submitData()">
+
+    <div class="container">
+        <h1>Please enter your Details Here!</h1>
+<div formGroupName="personalDetails" >
+    <div class="form-group">
+        <label for="username"> Name </label>
+        <input type="text" formControlName="username">
+        <span class="error" 
+        *ngIf="!form.get('personalDetails.username')?.valid && form.get('personalDetails.username')?.touched
+        ">
+        <span *ngIf="form.get('personalDetails.username')!.errors!['required']" >Please provide a Username</span>
+        
+    </span>
+    </div>
+    
+    <div class="form-group">
+        <label for="email"> Email</label>
+        <input type="email" formControlName="email" >
+        <span 
+        *ngIf="!form.get('personalDetails.email')?.valid && form.get('email')?.touched"
+        class="error">
+        <span *ngIf="form.get('personalDetails.email')!.errors!['email']" >Please Enter a valid Email</span>
+        </span> 
+    </div>
+    
+    <div class="form-group">
+        <label> Destination </label>
+        <input type="text" formControlName="destination">
+    </div>
+</div>
+</div>
+</form>
+</div>
